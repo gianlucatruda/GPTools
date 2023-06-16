@@ -12,7 +12,8 @@ Scrape a webpage to markdown with `web2md` and then pipe the output into `chunkg
 
 ```python
 python3 web2md/web2md.py "https://en.wikipedia.org/wiki/OpenAI" --ignore_images | \
-python3 chunkgpt/chunkgpt.py --chunk_size 500 --temperature 0.3 --max_tokens 500 --sys_message "You are Assistant who summarises any text" -o summary.md
+python3 chunkgpt/chunkgpt.py --chunk_size 500 --temperature 0.3 --max_tokens 500 \
+--sys_message "You are Assistant who summarises any text" -o summary.md
 ```
 
 ## Installation
@@ -20,6 +21,7 @@ python3 chunkgpt/chunkgpt.py --chunk_size 500 --temperature 0.3 --max_tokens 500
 ```bash
 git clone git@github.com:gianlucatruda/GPTools.git
 cd GPTools
+pip install -r requirements.txt
 export OPENAI_API_KEY="<your_openai_api_key>"
 ```
 
