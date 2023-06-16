@@ -11,5 +11,6 @@ Composable tools for doing useful things with GPT-4 (from the command line).
 Scrape a webpage to markdown with `web2md` and then pipe the output into `chunkgpt` to summarise each section and write it to `summary.md`
 
 ```python
-python3 web2md/web2md.py https://en.wikipedia.org/wiki/OpenAI --ignore_images | python3 chunkgpt/chunkgpt.py --chunk_size 500 --temperature 0.3 --max_tokens 500 --sys_message "You are Assistant who summarises any text" -o summary.md
+python3 web2md/web2md.py "https://en.wikipedia.org/wiki/OpenAI" --ignore_images | \
+python3 chunkgpt/chunkgpt.py --chunk_size 500 --temperature 0.3 --max_tokens 500 --sys_message "You are Assistant who summarises any text" -o summary.md
 ```
